@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f4f6;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.main-card {
+  width: 100%;
+  max-width: 42rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.step-indicator-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.step-active {
+  background-color: #22c55e;
+}
+
+.step-inactive {
+  background-color: #d1d5db;
+}
+
+.step-name {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.step-line {
+  flex: 1;
+  height: 0.25rem;
+  background-color: #d1d5db;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.line-active {
+  background-color: #22c55e;
+}
+
+.form-card {
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  appearance: none;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  color: #374151;
+  line-height: 1.25;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+  border-color: #60a5fa;
+}
+
+.input-error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.summary-details {
+  line-height: 1.5;
+  color: #374151;
+}
+.summary-details p {
+  margin-bottom: 0.75rem;
+}
+.summary-details p:last-child {
+  margin-bottom: 0;
+}
+
+.submit-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.submit-button {
+  background-color: #10b981;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #059669;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.5);
+}
+
+.navigation-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-button {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+  background-color: #d1d5db;
+}
+
+.nav-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.5);
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-button-primary {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.nav-button-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.nav-button-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+@media (max-width: 640px) {
+  .step-indicator-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: none;
+  }
+  .step-item {
+    margin: 0.5rem;
+  }
+  .step-line {
+    display: none;
+  }
+  .main-card {
+    padding: 1rem;
+  }
+  .form-card {
+    padding: 1rem;
+  }
+  .form-title {
+    font-size: 1.25rem;
+  }
+  .nav-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
